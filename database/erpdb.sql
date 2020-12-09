@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2020 at 08:22 AM
+-- Generation Time: Dec 09, 2020 at 08:44 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -76,7 +76,7 @@ INSERT INTO `colleges` (`id`, `user_id`, `college_name`, `college_address`, `cda
 CREATE TABLE `programme_details` (
   `id` int(11) NOT NULL,
   `college_id` int(10) DEFAULT NULL,
-  `course_code` int(100) DEFAULT NULL,
+  `course_code` varchar(100) DEFAULT NULL,
   `course_name` varchar(1000) DEFAULT NULL,
   `sanctioned_strength` int(11) DEFAULT NULL,
   `total_candidates` int(11) DEFAULT NULL,
@@ -91,10 +91,10 @@ CREATE TABLE `programme_details` (
 --
 
 INSERT INTO `programme_details` (`id`, `college_id`, `course_code`, `course_name`, `sanctioned_strength`, `total_candidates`, `foreign_candidates`, `other_board`, `ob_ug`, `ob_pg`) VALUES
-(3, 2, 25, 'B.B.A', 60, 17, 0, 0, 0, 0),
-(4, 2, 2, 'B.Com.', 120, 66, 0, 2, 2, 0),
-(5, 3, 25, 'B.B.A', 60, 17, 0, 0, 0, 0),
-(6, 3, 2, 'B.Com.', 120, 66, 0, 2, 2, 0);
+(3, 2, '25', 'B.B.A', 60, 17, 0, 0, 0, 0),
+(4, 2, '2', 'B.Com.', 120, 66, 0, 2, 2, 0),
+(5, 3, '25', 'B.B.A', 60, 17, 0, 0, 0, 0),
+(6, 3, '2', 'B.Com.', 120, 66, 0, 2, 2, 0);
 
 -- --------------------------------------------------------
 
